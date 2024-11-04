@@ -1,0 +1,134 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-grid--stretch">
+    <div class="kt-container kt-body  kt-grid kt-grid--ver" id="kt_body">
+        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+            {% include 'inc/messages.html' %}
+            <!-- begin:: Subheader -->
+            <div class="kt-subheader   kt-grid__item" id="kt_subheader">
+                <div class="kt-subheader__main">
+                    <h3 class="kt-subheader__title">Article</h3>
+                    <div class="kt-subheader__breadcrumbs">
+                        <a href="#" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+                        <span class="kt-subheader__breadcrumbs-separator"></span>
+                        <a href="" class="kt-subheader__breadcrumbs-link">articles</a>
+                        <span class="kt-subheader__breadcrumbs-separator"></span>
+                        <a href="" class="kt-subheader__breadcrumbs-link">detail</a>
+
+                    </div>
+                </div>
+                <div class="kt-subheader__toolbar">
+                    <div class="kt-subheader__wrapper">
+                        <a href="#" class="btn kt-subheader__btn-secondary">
+                            Reports
+                        </a>
+                        <div class="dropdown dropdown-inline" data-toggle="kt-tooltip" title="Quick actions"
+                             data-placement="top">
+                            <a href="#" class="btn btn-danger kt-subheader__btn-options"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Actions
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><i class="la la-plus"></i> Add New Article</a>
+                                <a class="dropdown-item" href="#" hidden="true"><i class="la la-user"></i> New Order</a>
+                                <a class="dropdown-item" href="#" hidden="true">
+                                    <i class="la la-cloud-download"></i> New Download
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" hidden="true"><i class="la la-cog"></i> Settings</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end:: Subheader -->
+            <!-- begin:: Content -->
+            <div class="kt-content kt-grid__item kt-grid__item--fluid">
+                <!--Begin::Dashboard 4-->
+                <!--Begin::Section-->
+                <!--End::Section-->
+                <!--Begin::Section-->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <!--begin:: Widgets/Sale Reports-->
+                        <div class="kt-portlet kt-portlet--tabs kt-portlet--height-fluid">
+                            <div class="kt-portlet__head">
+                                <div class="kt-portlet__head-label">
+                                    <h3 class="kt-portlet__head-title">
+                                        {{ article.title}}
+                                    </h3>
+                                </div>
+
+                            </div>
+
+                            <div class="kt-portlet__body">
+                                <!--Begin::Tab Content-->
+                                <div class="tab-content">
+                                    <!--begin::tab 1 content-->
+                                    <div class="tab-pane active" id="kt_widget11_tab1_content">
+                                        <!--begin::Widget 11-->
+                                        <div class="kt-widget11">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <td style="width:30%">
+                                                            User creator : {{article.user.username}}
+                                                        </td>
+<!--                                                        <td style="width:15%">Status</td>-->
+<!--                                                        <td style="width:15%" class="kt-align-right">Last Change</td>-->
+                                                    </tr>
+                                                    <tr><td> {{article.created }}</td></tr>
+                                                    <tr><td> Auther : {{article.auther }}</td></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                           <h3> Full Content</h3>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h4>{{ article.body }}</h4>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="kt-widget11__action kt-align-right">
+                                                <button type="button"
+                                                        class="btn btn-label-brand btn-bold btn-sm">Import
+                                                    Report
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!--end::Widget 11-->
+                                    </div>
+                                    <!--end::tab 1 content-->
+                                    <!--begin::tab 2 content-->
+
+
+                                        <!--begin::Widget 11-->
+
+
+                                        <!--end::Widget 11-->
+                                    </div>
+                                    <!--end::tab 2 content-->
+                                    <!--begin::tab 3 content-->
+
+                                    </div>
+                                    <!--end::tab 3 content-->
+                                </div>
+                                <!--End::Tab Content-->
+                            </div>
+                        </div>
+                        <!--end:: Widgets/Sale Reports-->
+            </div>
+
+            <!-- end:: Content -->
+        </div>
+    </div>
+</div>
+{% endblock %}
